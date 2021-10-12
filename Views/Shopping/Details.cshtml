@@ -1,0 +1,36 @@
+﻿@model DigitalRetailers.Models.Laptop;
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+<div class="container-fluid">
+    <div class="row mx-auto">
+        <div class="col-md-5">
+            <div class="card w-50 h-75">
+                <img src="@Model.laptopImageLink" alt="@Model.laptopName" />
+            </div>
+        </div>
+        <div class="col-md-7">
+            <table class="table table-hover">
+                <tr>
+                    <th>@Html.DisplayNameFor(model => model.laptopName)</th>
+                    <td>@Html.DisplayFor(model => model.laptopName)</td>
+                </tr>
+                <tr>
+                    <th>@Html.DisplayNameFor(model => model.laptopPrice)</th>
+                    <td>@Html.DisplayFor(model => model.laptopPrice)</td>
+                </tr>
+                <tr>
+                    <th>@Html.DisplayNameFor(model => model.laptopSpecification)</th>
+                    <td>@Html.DisplayFor(model => model.laptopSpecification)</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+<div>
+    <a class="btn  btn-outline-secondary m-2" asp-route-id="@Model.laptopId" asp-controller="Cart" asp-action="Buy">Add to cart</a>
+    <a class="btn btn-outline-info m-2" asp-action="Index">Back to List</a>
+</div>
+

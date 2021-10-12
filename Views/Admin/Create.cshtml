@@ -1,0 +1,49 @@
+﻿@model DigitalRetailers.Models.Laptop
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+
+<h4>Add Laptop</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="laptopName" class="control-label"></label>
+                <input asp-for="laptopName" class="form-control" />
+                <span asp-validation-for="laptopName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="laptopPrice" class="control-label"></label>
+                <input asp-for="laptopPrice" class="form-control" />
+                <span asp-validation-for="laptopPrice" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="laptopQuantity" class="control-label"></label>
+                <input asp-for="laptopQuantity" class="form-control" />
+                <span asp-validation-for="laptopQuantity" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="laptopSpecification" class="control-label"></label>
+                <textarea asp-for="laptopSpecification" class="form-control" rows="8"></textarea>
+                <span asp-validation-for="laptopSpecification" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="laptopImageLink" class="control-label"></label>
+                <input asp-for="laptopImageLink" class="form-control" />
+                <span asp-validation-for="laptopImageLink" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

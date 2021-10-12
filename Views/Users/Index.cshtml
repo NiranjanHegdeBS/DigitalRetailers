@@ -1,0 +1,45 @@
+﻿@model IEnumerable<DigitalRetailers.Models.User>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1 align="center">Welcome Admin!</h1>
+
+<p>
+    <a class="btn btn-outline-primary m-2" asp-action="Create" asp-controller="Admin">Add New Laptop</a>
+    <a class="btn btn-outline-primary m-2" asp-action="Index" asp-controller="Admin">View Laptops in Stock</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.userName)
+             </th>
+             <th>
+                  @Html.DisplayNameFor(model => model.userType)
+             </th>
+             <th>
+                 @Html.DisplayNameFor(model => model.userAdded)
+             </th>
+             <th></th>
+        </tr>
+    </thead>
+    <tbody>
+           @foreach (var item in Model)
+            {
+               <tr>
+                   <td>
+                       @Html.DisplayFor(modelItem => item.userName)
+                   </td>
+                   <td>
+                       @Html.DisplayFor(modelItem => item.userType)
+                   </td>
+                   <td>
+                       @Html.DisplayFor(modelItem => item.userAdded)
+                   </td>
+               </tr>
+            }
+    </tbody>
+</table>
